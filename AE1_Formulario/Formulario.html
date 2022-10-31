@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <script type="text/javascript" src="Formulario.js"> </script>
+    <link type="text/css" rel="stylesheet" href="Formulario.css" >
+</head>
+<body>
+    <H1>COMIENCE EL PEDIDO DE SU PIZZA</H1>
+    <div id="cabecera">
+        <form name="formulario" id="formulario" method="get" action="">
+            <fieldset>
+                <legend> MI PEDIDO </legend>
+                <!-- CREAMOS EL APARTADO PARA LOS DATOS PERSONALES -->
+                <fieldset>
+                <legend> DATOS PERSONALES </legend>
+                <p><label>Nombre:<input id="texto1" type="text" value="" name="nombre" placeholder="Escriba su nombre" autofocus> </label></p>
+                <p><label>Dirección:<input id="texto2" type="text" value="" name="dir" placeholder="Escriba su dirección">  </label></p>
+                <p><label>Teléfono:<input id="texto3" type="text" value="" name="tlf" placeholder="Escriba su telefono"> </label></p>
+                <p><label>Email:<input id="texto4" type="text" value="" name="email" placeholder="Escriba su email"> </label></p>
+                </fieldset>
+                </br>
+                <!-- CREAMOS EL APARTADO PARA EL TAMAÑO DE LA PIZZA, CHECKED EN UNO DE ELLOS PARA ELEGIR OBLIGATORIAMENTE UN TAMAÑO 
+                COMO PIDE EL ENUNCIADO -->
+                <fieldset>
+                <legend> TAMAÑO DE LA PIZZA</legend>
+                <p>Familiar: (15€) <input id="campo1" type="radio" value="15" name="tamaño"></p>
+                <p>Mediana: (10€) <input id="campo2" type="radio" value="10" name="tamaño" checked="checked"></p>
+                <p>Pequeña: (5€) <input id="campo3" type="radio" value="5" name="tamaño"></p>
+                </fieldset>
+                </br>
+                <!-- CREAMOS EL APARTADO PARA LOS INGREDIENTES, CHECKED EN EL PRIMERO PARA QUE TODAS LAS PIZZAS LLEVEN ESE INGREDIENTE BASE -->
+                <fieldset>
+                <legend> SELECCIONE SUS INGREDIENTES </legend>
+                <p>Base de queso y tomate: (+1€) <input id="campo4" type="checkbox" value="1" name="ingredientes" checked="checked"></p>
+                <p>Jamón York: (+1€) <input id="campo5" type="checkbox" value="1" name="ingredientes"></p>
+                <p>Bacon: (+1€) <input id="campo6" type="checkbox" value="1" name="ingredientes"></p>
+                <p>Piña: (+1€) <input id="campo7" type="checkbox" value="1" name="ingredientes"></p>
+                </fieldset>
+                </br>
+
+                <label> OBSERVACIONES SOBRE EL PEDIDO </label> 
+                </br>
+                <textarea rows="5" cols="100" name="observaciones"></textarea>
+                </br>
+                </br>
+
+                <!-- CREAMOS LOS INPUT TYPE="BUTTON", LLAMANDO A LAS FUNCIONES JAVASCRIPT CREADAS EN EL FICHERO JS
+                HEMOS CREADO UN BUTTON PARA VALIDAR EL PEDIDO Y OTRO BUTTON POR SI EL USUARIO QUIERE SABER EL PRECIO -->
+
+                <input type="button" onclick="validar()" value="Validar Pedido">
+                </br>
+                </br>
+                <input type="button" onclick="sumaTotal()" value="Procesar Pedido">
+                <!-- EN ESTE INPUT ES DONDE INTRODUCIMOS EL RESULTADO DE LA FUNCION SUMATOTAL() -->
+                Precio a pagar: <input type="text" id="campo8">
+
+                </br>
+                </br>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
