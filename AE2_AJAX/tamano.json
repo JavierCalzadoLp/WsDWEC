@@ -1,0 +1,16 @@
+[
+    {
+        "tamano": "Familiar",
+        "precio": "15"
+        
+    },
+    {
+        "tamano": "Mediana",
+        "precio": "10"
+    },
+    {
+        "tamano": "Pequena",
+        "precio": "5"
+    }
+    
+]

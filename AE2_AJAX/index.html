@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1> PIZZERIA </h1>
+
+    <!-- Para empezar nuestra actividad, vamos a crear el código HTML necesario, en primer lugar crearemos un DIV que nos servirá
+    de contenedor para meter el formulario, botones, etc.
+    Posteriormente, vamos a crear el form, y dentro de él, crearemos 2 DIVs para añadir los botones que cargaran el JSON en formato formulario
+    en nuestra página web.
+    Después, crearemos manualmente los datos de contacto (nombre, dirección, tlf y email)
+    Por último, añadiremos 3 botones, uno para procesar el pedido, otro para refrescar y otro para añadir dónde se añadirá el precio total -->
+
+    <div class="container">
+        <form id="formulario" name="formulario">
+
+            
+            <!-- En este DIV se incluye el botón MOSTRAR TAMAÑO el cual llamará a la función que mostrará en nuestra web
+            pintado el JSON en formato radio button de los tamaños de las pizzas en formato formulario-->
+            <div class="section">
+            <button class="btn" id="boton">MOSTRAR TAMAÑO</button>
+            
+                <fieldset id="res">
+                    <legend> TAMAÑO</legend>
+                </fieldset>
+            
+            </div>
+            <!-- En este DIV se incluye el botón MOSTRAR INGREDIENTES el cual llamará a la función que mostrará en nuestra web
+            pintado el JSON en formato checkbox de los ingredientes de las pizzas en formato formulario-->
+            <div class="section">
+            <button class="btn" id="boton2">MOSTRAR INGREDIENTES</button>
+
+            
+                <fieldset id="rest">
+                    <legend> INGREDIENTES </legend>
+                </fieldset>
+            
+            </div>
+            <!-- Formulario para rellenar los datos d contacto. Con la funcion 'required' los hacemos todos obligatorios -->
+            <div class="section">
+                
+                <fieldset id="datos">
+                   <legend> DATOS DE CONTACTO </legend>
+           
+                   <label for="nombre">Nombre:</label>
+                   <input type="text" id="nombre" name="nombre" placeholder="Escriba su nombre" required ><br>
+           
+                   <label for="direccion">Dirección:</label>
+                   <input type="text" id="direccion" name="direccion" placeholder="Escriba su direccion" required  ><br>
+           
+                   <label for="telefono">Teléfono:</label>
+                   <input type="text" id="telefono" name="telefono" placeholder="Escriba su telefono"  required ><br>
+           
+                   <label for="email">Email:</label>
+                   <input type="text" id="email" name="email" placeholder="Escriba su email" required ><br>
+               </fieldset>
+           
+           </div>
+
+           <!-- Botones donde procesaremos el pedido, refrescar y mostrar el precio total-->
+
+            <input type="submit" id="btnEnviar" value="Procesar pedido"> 
+            <input type="button" id="btnRefrescar" value="Refrescar">
+            <input type="text" id="resultado">
+        </form>
+    </div>
+
+    <!-- Es muy IMPORTANTE que el script aparezca aquí al final, si no podríamos tener problemas en las llamadas a las funciones-->
+
+    <script src="ajax.js"></script>
+</body>
+</html>
